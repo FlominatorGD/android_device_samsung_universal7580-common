@@ -49,26 +49,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bpf
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.kernel.ebpf.supported=false
-
-# ADB
-persist.service.adb.enable=0
-persist.service.debuggable=0
-persist.sys.usb.config=mtp,adb
-ro.adb.secure=0
-ro.debuggable=1
-ro.secure=0
+    ro.kernel.ebpf.supported=false
 
 # Blurs
 
 # set Blur
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.supports_background_blur=0 \
-		persist.sys.sf.disable_blurs=1 \
-		ro.sf.blurs_are_expensive=1
+    persist.sys.sf.disable_blurs=1 \
+    ro.sf.blurs_are_expensive=1
 
 # override to suit our needs
 PRODUCT_PRODUCT_OVERRIDES += \
     ro.surface_flinger.supports_background_blur=0 \
-		persist.sys.sf.disable_blurs=1 \
-		ro.sf.blurs_are_expensive=1
+    persist.sys.sf.disable_blurs=1 \
+    ro.sf.blurs_are_expensive=1
